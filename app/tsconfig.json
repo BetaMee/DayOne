@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types", "./typings"], // 设置查找 types 声明文件的位置
+    "noImplicitAny": true, // 必须设置变量类型
+    "strict": true, // 严格检查
+    "strictNullChecks": true, // 空值检查
+    "sourceMap": true, // 开启 sourceMap
+    "outDir": "dist",
+    "target": "es5", // 编译成 es5 的格式
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true, // 允许你使用 ES2015 默认的 imports 风格, 即使你导入的代码没有使用 ES2015 默认的 export
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".", // 可以相对这个目录 import 文件
+    "paths": {
+      "*": ["node_modules/*"]
+    }
+  },
+  "include": [
+    "src/*"
+  ],
+  "exclude": [
+    "dist/"
+  ]
+}
