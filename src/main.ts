@@ -8,8 +8,8 @@ let mainWindow: BrowserWindow | null;
 
 const createWindow = (): void => {
   mainWindow = new BrowserWindow({
-    height: 600,
-    width: 800
+    height: 750,
+    width:1000
   });
   // 加载入口文件
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
