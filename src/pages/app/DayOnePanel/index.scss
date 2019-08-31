@@ -1,0 +1,31 @@
+.container {
+  width: 15%;
+  padding: 5px;
+  .entrylist {
+    display: flex;
+    flex-direction: column;
+    .entryitem {
+      .name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: calc(100% - 5px);
+      }
+      .count {
+        width: 5px;
+        font-size: 14x;
+      }
+    }
+  }
+  .control {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .status {
+    padding: 10px 0;
+  }
+
+}
+

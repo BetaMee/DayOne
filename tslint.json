@@ -4,6 +4,7 @@
     "tslint-react-hooks"
   ],
   "rules": {
+    "jsx-no-multiline-js": false,
     "max-line-length": {
       "options": [
         120
