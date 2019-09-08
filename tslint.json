@@ -16,13 +16,7 @@
         "multiline": "never",
         "singleline": "never"
       }
-    ]
-  },
-  "jsRules": {
-    "max-line-length": {
-      "options": [
-        120
-      ]
-    }
+    ],
+    "no-implicit-dependencies": [true, "dev", ["@store", "@interfaces"]]
   }
 }

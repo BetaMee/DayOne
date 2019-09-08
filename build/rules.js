@@ -43,8 +43,11 @@ module.exports = [
         {
           loader: 'css-loader', // CSS加载器
           options: {
-              modules: true,
-              // localsConvention: 'camelCase'
+              modules: {
+                mode: 'local',
+                localIdentName: '[name]__[local]--[hash:base64:5]'
+              },
+              localsConvention: 'camelCase'
           }
         },
         {

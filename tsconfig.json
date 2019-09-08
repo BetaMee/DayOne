@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "baseUrl": ".", // 可以相对这个目录 import 文件
     "paths": {
-      "*": ["node_modules/*"]
+      "@store/*": ["src/store/*"],
+      "@interfaces/*": ["src/interfaces/*"]
     }
   },
   "include": [

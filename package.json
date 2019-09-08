@@ -1,5 +1,5 @@
 {
-  "name": "DayOneApp",
+  "name": "dayoneapp",
   "version": "0.0.1",
   "description": "collect your one day into DayOne",
   "main": ".webpack/main",
@@ -19,10 +19,11 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "mobx": "^5.13.0",
-    "mobx-react": "^6.1.1",
+    "mobx-react-lite": "^1.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-mobx": "0.0.4"
+    "rxjs": "^6.5.3",
+    "rxjs-hooks": "^0.5.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.44",
