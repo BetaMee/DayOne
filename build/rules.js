@@ -72,5 +72,16 @@ module.exports = [
           loader: 'sass-loader'
         }
      ],
-  }
+  },
+  // 处理图片等资源
+  {
+    test: /\.(png|jpg|svg|eot|otf|ttf|woff|woff2)$/,
+    loader: 'file-loader',
+    options: {
+        name: '[name].[ext]',
+        // outputPath: 'css/assets',
+        // publicPath: './assets'
+    }
+}
+
 ];
