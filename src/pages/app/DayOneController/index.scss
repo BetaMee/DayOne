@@ -1,4 +1,150 @@
 .container {
   -webkit-app-region: drag;
   height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #DEDDDD;
+  padding-left: 90px;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.control {
+  -webkit-app-region: no-drag;
+  display: flex;
+  flex-direction: row;
+  padding: 0 4px;
+  .toolBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span {
+      &:active {
+        background-color: #F6F6F6;
+      }
+      cursor: pointer;
+      width: 54px;
+      height: 24px;
+      padding: 3px 2px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #FFFFFF;
+      margin: 0 5px;
+      border-radius: 4px;
+      i {
+        cursor: pointer;
+        margin: 0 auto;
+        width: 16px;
+        height: 16px;
+        background-position: center;
+        background-size: cover;
+        background-clip: content-box;
+        background-repeat: no-repeat;
+        display: inline-block;
+      }
+      .icon_menu_switch {
+        background-image: url('../../../assets/icon/menu-switch.svg');
+      }
+      .icon_filter {
+        background-image: url('../../../assets/icon/filter.svg');
+      }
+      .icon_check {
+        background-image: url('../../../assets/icon/switch.svg');
+      }
+    }
+  }
+  .viewBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    span {
+      &:first-child {
+        border-radius: 4px 0 0 4px;
+      }
+      &:last-child {
+        border-radius: 0px 4px 4px 0;
+      }
+      &:active {
+        background-color: #F6F6F6;
+      }
+      cursor: pointer;
+      width: 54px;
+      height: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #FFFFFF;
+      i {
+        cursor: pointer;
+        margin: 0 auto;
+        width: 16px;
+        height: 16px;
+        background-position: center;
+        background-size: cover;
+        background-clip: content-box;
+        background-repeat: no-repeat;
+        display: inline-block;
+      }
+      .icon_detail {
+        background-image: url('../../../assets/icon/detail_list.svg');
+      }
+      .icon_detail_selected {
+        background-image: url('../../../assets/icon/detail_list_selected.svg');
+      }
+      .icon_block {
+        background-image: url('../../../assets/icon/block_list.svg');
+      }
+      .icon_block_selected {
+        background-image: url('../../../assets/icon/block_list_selected.svg');
+      }
+      .icon_map {
+        background-image: url('../../../assets/icon/map_list.svg');
+      }
+      .icon_map_selected {
+        background-image: url('../../../assets/icon/map_list_selected.svg');
+      }
+      .icon_canlendar {
+        background-image: url('../../../assets/icon/calendar_list.svg');
+      }
+      .icon_canlendar_selected {
+        background-image: url('../../../assets/icon/calendar_list_selected.svg');
+      }
+    }
+  }
+}
+
+.addnew {
+  -webkit-app-region: no-drag;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  span {
+    &:active {
+      background-color: #F6F6F6;
+    }
+    cursor: pointer;
+    width: 54px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    .icon_add {
+      cursor: pointer;
+      margin: 0 auto;
+      width: 16px;
+      height: 16px;
+      background-position: center;
+      background-size: cover;
+      background-clip: content-box;
+      background-repeat: no-repeat;
+      display: inline-block;
+      background-image: url('../../../assets/icon/add.svg');
+    }
+  }
 }
