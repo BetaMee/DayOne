@@ -2,6 +2,8 @@
 // Please do not change this file!
 interface CssExports {
   'addnew': string;
+  'app-drag-title': string;
+  'appDragTitle': string;
   'container': string;
   'control': string;
   'iconAdd': string;
