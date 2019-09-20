@@ -10,6 +10,7 @@
         120
       ]
     },
+    "semicolon": [true, "never"],
     "quotemark": [true, "single", "jsx-single"],
     "trailing-comma": [
       true, {
