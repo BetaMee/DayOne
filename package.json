@@ -6,6 +6,11 @@
   "repository": "git@github.com:BetaMee/DayOne.git",
   "author": "betamee <gongxq95@gmail.com>",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=development && electron-forge start",
     "package": "electron-forge package",
@@ -18,14 +23,18 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
+    "husky": "^3.0.5",
     "mobx": "^5.13.0",
     "mobx-react-lite": "^1.4.1",
+    "ramda": "^0.26.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "rxjs": "^6.5.3",
     "rxjs-hooks": "^0.5.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@electron-forge/cli": "6.0.0-beta.44",
     "@electron-forge/maker-deb": "6.0.0-beta.44",
     "@electron-forge/maker-rpm": "6.0.0-beta.44",
@@ -33,6 +42,7 @@
     "@electron-forge/maker-zip": "6.0.0-beta.44",
     "@electron-forge/plugin-webpack": "6.0.0-beta.44",
     "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
+    "@types/ramda": "github:types/npm-ramda#dist",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "@types/webpack-env": "^1.14.0",
