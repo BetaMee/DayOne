@@ -40,7 +40,8 @@ const DayOnePanel: React.SFC<IDayOnePanelProp> = observer(() => {
   const leftRef = useRef<HTMLDivElement>(null) as React.MutableRefObject<HTMLDivElement>
   // 动态样式
   const dynamicStyle = {
-    width: `${leftControlWidth}px`
+    width: `${leftControlWidth}px`,
+    display: `${leftControlWidth === 0 ? 'none': 'block'}`
   }
   // 设置回调函数
   const handleControlWidthChangeCb = (currentX: number):void => {
@@ -73,12 +74,16 @@ const DayOnePanel: React.SFC<IDayOnePanelProp> = observer(() => {
         </div>
       </div>
       {/** 用于调整宽度 */}
-      <ResizeHandler
-         eleRef={leftRef}
-         initWidth={leftControlWidth}
-         handleControlWidthChange={setLeftControlWidth}
-         handleControlWidthChangeCb={handleControlWidthChangeCb}
-      />
+      {
+        leftControlWidth !== 0 && (
+          <ResizeHandler
+            eleRef={leftRef}
+            initWidth={leftControlWidth}
+            handleControlWidthChange={setLeftControlWidth}
+            handleControlWidthChangeCb={handleControlWidthChangeCb}
+          />
+        )
+      }
     </React.Fragment>
   )
 })
