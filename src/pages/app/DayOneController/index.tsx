@@ -13,20 +13,25 @@ const DayOneController: React.SFC = observer(() => {
    // 引入全局样式
    const {
     entryViewMode,
-    switchEntryViewMode
+    switchEntryViewMode,
+    switchLeftControlWidth
   } = useGlobalStyleStore()
-
+  // 改变 entrymode
   const handleViewModeChange = (mode: number) => {
     switchEntryViewMode(mode)
+  }
+  // 点击切换视图
+  const handleSwitchPanelClick = () => {
+    switchLeftControlWidth()
   }
 
   return (
     <React.Fragment>
-      <div className={s.appDragTitle} >Day One</div>
+      <div className={s.appDragTitle} />
       <div className={s.container}>
         <div className={s.control}>
           <div className={s.toolBar}>
-            <span>
+            <span onClick={handleSwitchPanelClick}>
               <i className={s.iconMenuSwitch}/>
             </span>
             <span>

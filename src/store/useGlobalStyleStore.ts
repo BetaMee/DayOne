@@ -4,7 +4,8 @@ import {
 
 import {
   StyleStoreContext,
-  StyleStoreProvider
+  StyleStoreProvider,
+  ViewMode
 } from './context/StyleStoreContext'
 
 // 创建 HOOK
@@ -20,5 +21,6 @@ export default useGlobalStyleStore
 
 export {
   StyleStoreContext,
-  StyleStoreProvider
+  StyleStoreProvider,
+  ViewMode
 }
