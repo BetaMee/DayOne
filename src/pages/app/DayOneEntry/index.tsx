@@ -17,15 +17,18 @@ import s from './index.scss'
 
 const mockData = [
   {
+    id: 1,
     year:  2017, // 年
     month: 3, // 月
     entryList: [
       {
+        entryId: 1,
         week: 0, // 周日
         time: '12:09', // 时间
         content: 'Test Content' // 内容
       },
       {
+        entryId: 2,
         week: 1, // 周一
         time: '15:09', // 时间
         content: 'Test 范德萨发生进度付款了' // 内容
@@ -33,10 +36,12 @@ const mockData = [
     ] // 数据列表
   },
   {
+    id: 2,
     year:  2017, // 年
     month: 4, // 月
     entryList: [
       {
+        entryId: 3,
         week: 0, // 周日
         time: '15:09', // 时间
         content: '荒野大求生' // 内容
@@ -44,12 +49,14 @@ const mockData = [
     ] // 数据列表
   },
   {
+    id: 3,
     year:  2018, // 年
     month: 1, // 月
     week: 0, // 周日
     time: '12:09', // 时间
     entryList: [
       {
+        entryId: 4,
         week: 3, // 周日
         time: '15:09', // 时间
         content: 'dsaf' // 内容
@@ -79,7 +86,9 @@ const DayOneEntry:React.SFC = observer(() => {
       >
         {
           entryViewMode === ViewMode.List && (
-            <ListViewMode />
+            <ListViewMode
+              viewdata={mockData}
+            />
           )
         }
         {

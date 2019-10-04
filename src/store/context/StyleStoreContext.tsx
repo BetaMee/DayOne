@@ -19,7 +19,7 @@ const createStyleStore = () => ({
   // 控制拖拽
   cachedleftControlWidth: 190,
   leftControlWidth: 190, // 左区控制长度px
-  mindControlWidth: 300, // 中区控制长度px
+  mindControlWidth: 250, // 中区控制长度px
   setLeftControlWidth(width: number) {
     const innerWidth =  window.innerWidth
     // 不能无限大
