@@ -10,20 +10,27 @@ import '../../assets/styles/global.scss'
 
 import {
   StyleStoreProvider
-} from '../../store/useGlobalStyleStore'
+} from '@store/useGlobalStyleStore'
+
+import {
+  StateStoreProvider
+} from '@store/useGlobalStateStore'
+
 
 const DayOneApp: React.SFC = () => {
   return (
-    <StyleStoreProvider>
-      <div className={s.container}>
-        <DayOneController />
-        <div className={s.main}>
-          <DayOnePanel />
-          <DayOneEntry />
-          <DayOneViewer />
+    <StateStoreProvider>
+      <StyleStoreProvider>
+        <div className={s.container}>
+          <DayOneController />
+          <div className={s.main}>
+            <DayOnePanel />
+            <DayOneEntry />
+            <DayOneViewer />
+          </div>
         </div>
-      </div>
-    </StyleStoreProvider>
+      </StyleStoreProvider>
+    </StateStoreProvider>
   )
 }
 

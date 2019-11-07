@@ -5,7 +5,7 @@ import {
 
 import useGlobalStyleStore, {
   ViewMode
-} from '../../../store/useGlobalStyleStore'
+} from '@store/useGlobalStyleStore'
 
 import s from './index.scss'
 

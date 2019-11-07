@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "typeRoots": ["./node_modules/@types", "./typings"], // 设置查找 types 声明文件的位置
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ], // 设置查找 types 声明文件的位置
     "noImplicitAny": true, // 必须设置变量类型
     "strict": true, // 严格检查
     "strictNullChecks": true, // 空值检查
@@ -13,14 +16,19 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "baseUrl": ".", // 可以相对这个目录 import 文件
+    // "allowJs": true,
+    "baseUrl": "./", // 可以相对这个目录 import 文件
     "paths": {
-      "@store/*": ["src/store/*"],
-      "@interfaces/*": ["src/interfaces/*"]
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@interfaces/*": [
+        "src/interfaces/*"
+      ]
     }
   },
   "include": [
-    "src/*"
+    "src/**/*"
   ],
   "exclude": [
     "out/"

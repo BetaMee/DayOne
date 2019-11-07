@@ -7,10 +7,10 @@ import ResizeHandler from '../common/ResizeHandler'
 
 import s from './index.scss'
 
-import useGlobalStyleStore from '../../../store/useGlobalStyleStore'
+import useGlobalStyleStore from '@store/useGlobalStyleStore'
 import {
   IDayOnePanelProp
-} from '../../../interfaces/IComponents'
+} from '@interfaces/IComponents'
 
 const mockData = [
   {

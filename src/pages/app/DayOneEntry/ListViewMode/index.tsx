@@ -4,19 +4,18 @@ import s from './index.scss'
 
 import {
   IListViewModeProp
-} from '../../../../interfaces/IComponents'
+} from '@interfaces/IComponents'
 
 // mock
-
 const mockimg = require('../../../../mock/floyd.jpg')
 
-const ListViewMode: React.SFC<IListViewModeProp> = ({
-  viewdata
+const ListViewMode: React.SFC<IListViewModeProp> = React.memo(({
+  viewstate
 }) => {
-
+  console.log(viewstate)
   return (
     <div className={s.container}>
-      {viewdata.map(item => {
+      {viewstate.map(item => {
         return (
           <div key={item.id} className={s.listitem}>
             <div className={s.listdate}>
@@ -57,6 +56,6 @@ const ListViewMode: React.SFC<IListViewModeProp> = ({
       })}
     </div>
   )
-}
+})
 
 export default ListViewMode

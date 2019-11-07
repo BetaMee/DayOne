@@ -14,7 +14,7 @@ import {
 
 import {
   IResizeHandlerProp
-} from '../../../../interfaces/IComponents'
+} from '@interfaces/IComponents'
 
 import s from './index.scss'
 

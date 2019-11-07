@@ -1,4 +1,7 @@
-import React, { useRef } from 'react'
+import React, {
+  useRef
+  // useMemo
+} from 'react'
 import {
   observer
 } from 'mobx-react-lite'
@@ -11,66 +14,22 @@ import CalendarViewMode from './CalendarViewMode'
 
 import useGlobalStyleStore, {
   ViewMode
-} from '../../../store/useGlobalStyleStore'
+} from '@store/useGlobalStyleStore'
+
+import useGlobalStateStore from '@store/useGlobalStateStore'
 
 import s from './index.scss'
 
-const mockData = [
-  {
-    id: 1,
-    year:  2017, // 年
-    month: 3, // 月
-    entryList: [
-      {
-        entryId: 1,
-        week: 0, // 周日
-        time: '12:09', // 时间
-        content: 'Test Content' // 内容
-      },
-      {
-        entryId: 2,
-        week: 1, // 周一
-        time: '15:09', // 时间
-        content: 'Test 范德萨发生进度付款了' // 内容
-      }
-    ] // 数据列表
-  },
-  {
-    id: 2,
-    year:  2017, // 年
-    month: 4, // 月
-    entryList: [
-      {
-        entryId: 3,
-        week: 0, // 周日
-        time: '15:09', // 时间
-        content: '荒野大求生' // 内容
-      }
-    ] // 数据列表
-  },
-  {
-    id: 3,
-    year:  2018, // 年
-    month: 1, // 月
-    week: 0, // 周日
-    time: '12:09', // 时间
-    entryList: [
-      {
-        entryId: 4,
-        week: 3, // 周日
-        time: '15:09', // 时间
-        content: 'dsaf' // 内容
-      }
-    ] // 数据列表
-  }
-]
-
 const DayOneEntry:React.SFC = observer(() => {
+  // context 中的数据源
   const {
     mindControlWidth,
     setMiddleControlWidth,
     entryViewMode
   } = useGlobalStyleStore()
+  const {
+    viewstate
+  } = useGlobalStateStore()
   // 创建 ref
   const rightRef = useRef<HTMLDivElement>(null) as React.MutableRefObject<HTMLDivElement>
   // 动态样式
@@ -87,7 +46,7 @@ const DayOneEntry:React.SFC = observer(() => {
         {
           entryViewMode === ViewMode.List && (
             <ListViewMode
-              viewdata={mockData}
+              viewstate={viewstate}
             />
           )
         }
