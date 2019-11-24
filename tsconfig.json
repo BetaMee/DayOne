@@ -20,10 +20,13 @@
     "baseUrl": "./", // 可以相对这个目录 import 文件
     "paths": {
       "@store/*": [
-        "src/store/*"
+        "src/renderer/store/*"
       ],
       "@interfaces/*": [
-        "src/interfaces/*"
+        "src/renderer/interfaces/*"
+      ],
+      "@common/*": [
+        "src/renderer/common/*"
       ]
     }
   },

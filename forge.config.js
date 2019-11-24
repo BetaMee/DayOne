@@ -31,7 +31,7 @@ module.exports = {
           "config": "./build/webpack.renderer.config.js",
           "entryPoints": [
             {
-              "html": "./src/html/app.html",
+              "html": "./src/renderer/html/app.html",
               "js": "./src/renderer/RenderApp.tsx",
               "name": "main_window"
             }

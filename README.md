@@ -3,6 +3,10 @@
 
 ## English version
 
+## Start
+
+* yarn run start
+
 ## Technology stack
 
 * Desktop application framework: electon
@@ -22,24 +26,28 @@
 
 ## Technical points that need to be solved in the future
 
-- [ ] Add data layer
-- The suspended ceiling for ListViewMode component
-- The animated scroll for ListViewMode component
-- The animated drag and drop for ListViewMode component
-- The multiselect of animated drag and drop for ListViewMode component
-- onFocus event handler for some components
-- Performance optimization
-- BlockViewMode component
-- MapViewMode component
-- CalendarViewMode component
-- Appilication status component
-- Setting window
-- New Journal window
-- Communication between the main process and the rendering process
-- Fingerprint or password identification of Mac OS for application
-- Try new build tools: Docker、Travis
+- [x] Add data layer
+- [ ] The suspended ceiling for ListViewMode component
+- [ ] The animated scroll for ListViewMode component
+- [ ] The animated drag and drop for ListViewMode component
+- [ ] The multiselect of animated drag and drop for ListViewMode component
+- [ ] onFocus event handler for some components
+- [ ] Performance optimization
+- [ ] BlockViewMode component
+- [ ] MapViewMode component
+- [ ] CalendarViewMode component
+- [ ] Appilication status component
+- [ ] Setting window
+- [ ] New Journal window
+- [ ] Communication between the main process and the rendering process
+- [ ] Fingerprint or password identification of Mac OS for application
+- [ ] Try new build tools: Docker、Travis
 
 ## 中文版
+
+## 启动
+
+`yarn run start`
 
 ## 技术栈
 
@@ -60,7 +68,7 @@
 
 ## 未来需要解决的技术点
 
-- [ ] 接入数据层
+- [x] 接入数据层
 - [ ] ListViewMode 组件悬浮吸顶
 - [ ] ListViewMode 组件添加动画滚动
 - [ ] ListViewMode 组件添加动画拖拽

@@ -3,6 +3,8 @@ import {
   BrowserWindow
 } from 'electron'
 
+import startFileServer from './main/file'
+
 let mainWindow: BrowserWindow | null
 
 const createWindow = (): void => {
@@ -46,3 +48,6 @@ app.on('activate', (): void => {
     createWindow()
   }
 })
+
+// 启动文件服务监听
+startFileServer()

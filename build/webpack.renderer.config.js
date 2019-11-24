@@ -5,8 +5,9 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json', '.scss'],
     alias: {
-      '@store': path.resolve(__dirname, '../src/store'),
-      '@interfaces': path.resolve(__dirname, '../src/interfaces')
+      '@store': path.resolve(__dirname, '../src/renderer/store'),
+      '@interfaces': path.resolve(__dirname, '../src/renderer/interfaces'),
+      '@common': path.resolve(__dirname, '../src/renderer/common')
     }
   },
   // webpack 常规配置
