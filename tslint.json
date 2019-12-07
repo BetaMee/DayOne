@@ -18,6 +18,9 @@
         "singleline": "never"
       }
     ],
-    "no-implicit-dependencies": [true, "dev", ["@store", "@interfaces"]]
+    "no-implicit-dependencies": [
+      true,
+      "dev",
+      ["@store", "@interfaces", "@common"]]
   }
 }
