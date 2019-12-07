@@ -32,8 +32,13 @@ module.exports = {
           "entryPoints": [
             {
               "html": "./src/renderer/html/app.html",
-              "js": "./src/renderer/RenderApp.tsx",
+              "js": "./src/renderer/entry/RenderApp.tsx",
               "name": "main_window"
+            },
+            {
+              "html": "./src/renderer/html/setting.html",
+              "js": "./src/renderer/entry/RenderSetting.tsx",
+              "name": "setting_window"
             }
           ]
         }
