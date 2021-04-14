@@ -9,10 +9,10 @@
     "strictNullChecks": true, // 空值检查
     "sourceMap": true, // 开启 sourceMap
     "outDir": "dist",
-    "target": "es5", // 编译成 es5 的格式
+    "target": "ES2016", // 编译成 es5 的格式
     "jsx": "react",
     "allowSyntheticDefaultImports": true, // 允许你使用 ES2015 默认的 imports 风格, 即使你导入的代码没有使用 ES2015 默认的 export
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,

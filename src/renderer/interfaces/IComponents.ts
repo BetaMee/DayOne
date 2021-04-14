@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  IViewEntryItem
+  TEntryData
 } from './IStore'
 
 export interface IResizeHandlerProp {
@@ -11,7 +11,6 @@ export interface IResizeHandlerProp {
 }
 
 export interface IListViewModeProp {
-  viewstate: Array<IViewEntryItem>
+  listViewData: TEntryData,
+  selectDayOneEntryById: (id: string) => void
 }
-
-export interface IDayOnePanelProp {}

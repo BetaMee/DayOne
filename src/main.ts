@@ -3,7 +3,7 @@ import {
   BrowserWindow
 } from 'electron'
 
-import startFileServer from './main/file'
+import startFileDataBaseServer from './main/file'
 
 let mainWindow: BrowserWindow | null
 
@@ -49,5 +49,5 @@ app.on('activate', (): void => {
   }
 })
 
-// 启动文件服务监听
-startFileServer()
+// 启动文件数据库监听
+startFileDataBaseServer()

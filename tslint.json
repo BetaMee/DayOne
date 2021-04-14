@@ -21,6 +21,8 @@
     "no-implicit-dependencies": [
       true,
       "dev",
-      ["@store", "@interfaces", "@common"]]
+      ["@store", "@interfaces", "@common"]
+    ],
+    "disable-next-line": [true, "never"]
   }
 }

@@ -8,34 +8,24 @@ import ResizeHandler from '../common/ResizeHandler'
 import s from './index.scss'
 
 import useGlobalStyleStore from '@store/useGlobalStyleStore'
+import useGlobalStateStore from '@store/useGlobalStateStore'
+
 import {
-  IDayOnePanelProp
-} from '@interfaces/IComponents'
+  openSettingWindow
+} from '@common/window'
 
-const mockData = [
-  {
-    id: '1',
-    name: '不必在乎我是谁',
-    count: 15
-  },
-  {
-    id: '2',
-    name: '贝加尔湖畔',
-    count: 35
-  },
-  {
-    id: '3',
-    name: 'Five Hundred Miles',
-    count: 75
-  }
-]
-
-const DayOnePanel: React.SFC<IDayOnePanelProp> = observer(() => {
+const DayOnePanel: React.SFC = observer(() => {
   // 引入全局样式
   const {
     leftControlWidth,
     setLeftControlWidth
   } = useGlobalStyleStore()
+  // 引入全局状态数据
+  const {
+    panelViewState,
+    selectDayOneByMetaId
+  } = useGlobalStateStore()
+  console.log(panelViewState)
   // 创建 ref
   const leftRef = useRef<HTMLDivElement>(null) as React.MutableRefObject<HTMLDivElement>
   // 动态样式
@@ -49,6 +39,16 @@ const DayOnePanel: React.SFC<IDayOnePanelProp> = observer(() => {
       setLeftControlWidth(0)
     }
   }
+  // 设置点击日记事件
+  const handleItemClick = (metaid: string) => {
+    selectDayOneByMetaId(metaid)
+  }
+  // TODO 设置点击新建日记事件
+  const handleNewJournal = () => {
+  }
+  const handleOpenSetting = () => {
+    openSettingWindow()
+  }
   return (
     <React.Fragment>
       <div
@@ -57,17 +57,38 @@ const DayOnePanel: React.SFC<IDayOnePanelProp> = observer(() => {
         ref={leftRef}
       >
         <div className={s.entrylist}>
-          <div className={s.entryitem}>全部条目</div>
-          {mockData.map(item => (
-            <div key={item.id} className={s.entryitem}>
+          <div
+            className={s.entryitem}
+            onClick={handleItemClick.bind(null, '')}
+          >
+            全部条目
+          </div>
+          {panelViewState.map(item => (
+            <div
+              key={item.metaid}
+              className={s.entryitem}
+              onClick={handleItemClick.bind(null, item.metaid)}
+              style={{
+                color:  item.isSelected ? '#FFFFFF' : item.color,
+                backgroundColor: item.isSelected ? item.color : ''
+              }}
+            >
               <span className={s.name}>{item.name}</span>
               <span className={s.count}>{item.count}</span>
             </div>
           ))}
         </div>
         <div className={s.control}>
-          <span>New Journal +</span>
-          <span>Settings</span>
+          <span
+            onClick={handleNewJournal}
+          >
+            New Journal +
+          </span>
+          <span
+            onClick={handleOpenSetting}
+          >
+            Settings
+          </span>
         </div>
         <div className={s.status}>
           <span>checked</span>

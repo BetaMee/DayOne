@@ -29,7 +29,7 @@ const ResizeHandler: React.SFC<IResizeHandlerProp> = ({
     number,
     React.MutableRefObject<HTMLDivElement>[]
   >(
-    (event$, inputs$) => {
+    (event$, state$, inputs$) => {
       return event$.pipe(
         withLatestFrom(
           inputs$.pipe(
@@ -54,7 +54,7 @@ const ResizeHandler: React.SFC<IResizeHandlerProp> = ({
       )
     },
     initWidth,
-    [eleRef] as React.MutableRefObject<HTMLDivElement>[] // 强制类型判定
+    [eleRef]
   )
 
   const onMouseUp = () => {

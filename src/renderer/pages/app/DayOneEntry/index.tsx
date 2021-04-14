@@ -28,7 +28,8 @@ const DayOneEntry:React.SFC = observer(() => {
     entryViewMode
   } = useGlobalStyleStore()
   const {
-    viewstate
+    listViewData,
+    selectDayOneEntryById
   } = useGlobalStateStore()
   // 创建 ref
   const rightRef = useRef<HTMLDivElement>(null) as React.MutableRefObject<HTMLDivElement>
@@ -46,7 +47,8 @@ const DayOneEntry:React.SFC = observer(() => {
         {
           entryViewMode === ViewMode.List && (
             <ListViewMode
-              viewstate={viewstate}
+              listViewData={listViewData}
+              selectDayOneEntryById={selectDayOneEntryById}
             />
           )
         }

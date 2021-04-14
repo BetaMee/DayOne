@@ -1,0 +1,40 @@
+.container {
+  .appDragTitle {
+    -webkit-app-region: drag;
+    width: 100%;
+    height: 24px;
+    background-color: #EDEDED;
+  }
+  .pannel {
+    display: flex;
+    flex-direction: row;
+    background-color: #EDEDED;
+    padding: 0 5px;
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      padding: 0 5px;
+      .icon {
+        i {
+          cursor: pointer;
+          margin: 0 auto;
+          width: 38px;
+          height: 38px;
+          background-position: center;
+          background-size: cover;
+          background-clip: content-box;
+          background-repeat: no-repeat;
+          display: inline-block;
+        }
+        .iconSetting {
+          background-image: url('../../assets/icon/setting.svg')
+        }
+      }
+      .txt {
+        text-align: center;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
